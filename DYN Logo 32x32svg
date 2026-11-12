@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+  <defs>
+    <!-- ব্যাকগ্রাউন্ড গ্রেডিয়েন্ট -->
+    <radialGradient id="bg" cx="50%" cy="40%" r="70%">
+      <stop offset="0%" stop-color="#242B33" />
+      <stop offset="100%" stop-color="#12161A" />
+    </radialGradient>
+
+    <!-- ৩ডি D শেপ গ্রেডিয়েন্ট -->
+    <linearGradient id="dShape" x1="8" y1="5" x2="24" y2="27" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#4B5563" />
+      <stop offset="50%" stop-color="#323842" />
+      <stop offset="100%" stop-color="#1E232B" />
+    </linearGradient>
+
+    <!-- সায়ান নিয়ন গ্রেডিয়েন্ট -->
+    <linearGradient id="neonCyan" x1="4" y1="8" x2="28" y2="24" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#8BFFEE" />
+      <stop offset="50%" stop-color="#2EE5D5" />
+      <stop offset="100%" stop-color="#15A6B2" />
+    </linearGradient>
+
+    <!-- নিয়ন গ্লো ইফেক্ট -->
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="1" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- ডার্ক রাউন্ডেড ব্যাকগ্রাউন্ড -->
+  <rect width="32" height="32" rx="7" fill="url(#bg)" />
+
+  <!-- পেছনের নিয়ন রিং/ওয়েভ -->
+  <path d="M19 5.2C23.5 5.2 27 8.5 26.5 13.5C26 17.5 22 20 20 21" stroke="#2EE5D5" stroke-width="0.7" stroke-linecap="round" opacity="0.6" />
+  <path d="M6 18C7.5 21 11 25.5 16 26C21 26.5 25.5 22.5 27 18" stroke="#1AD1C9" stroke-width="0.5" stroke-linecap="round" opacity="0.5" />
+
+  <!-- মূল ৩ডি 'D' বডি -->
+  <path d="M9 5.5H16.2C21.8 5.5 25.2 9.5 25.2 15.5C25.2 21.5 21.8 25.5 16.2 25.5H9V5.5Z" fill="url(#dShape)" stroke="url(#neonCyan)" stroke-width="1.2" stroke-linejoin="round" />
+
+  <!-- ভেতরের ক্যাভিটি বা কাটআউট -->
+  <path d="M11.5 8H15.8C20 8 22.5 10.8 22.5 15.5C22.5 20.2 20 23 15.8 23H11.5V8Z" fill="#181C22" stroke="#38B2AC" stroke-width="0.8" stroke-linejoin="round" />
+
+  <!-- ভেতরের কালো ফাঁকা অংশ -->
+  <path d="M13.2 10.2H15.6C18.2 10.2 19.8 12.2 19.8 15.5C19.8 18.8 18.2 20.8 15.6 20.8H13.2V10.2Z" fill="#111417" />
+
+  <!-- ৩ডি কর্নার বেভেল লাইন -->
+  <line x1="9" y1="5.5" x2="11.5" y2="8" stroke="#6EE7DE" stroke-width="0.8" />
+  <line x1="9" y1="25.5" x2="11.5" y2="23" stroke="#6EE7DE" stroke-width="0.8" />
+
+  <!-- সামনের ডায়নামিক গ্লোয়িং নিয়ন সোয়ার্ল ওয়েভ -->
+  <path d="M4.5 19.5C8 16 12 16.5 16 15C20 13.5 23 10 27.5 11.5" stroke="url(#neonCyan)" stroke-width="1.25" stroke-linecap="round" filter="url(#glow)" />
+  
+  <path d="M6.5 22.2C10 19 14 18.5 17.5 17C21 15.5 24 13.5 26.5 14.5" stroke="#A5FFF9" stroke-width="0.7" stroke-linecap="round" opacity="0.9" />
+</svg>
